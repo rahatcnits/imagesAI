@@ -1,0 +1,171 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700&family=Lato:wght@100;300;400;700&display=swap");
+
+@font-face {
+  font-family: Switzer;
+  src: url(../fonts/Switzer/Fonts/OTF/Switzer-Semibold.otf);
+}
+
+:root {
+  --primary-font: Switzer;
+  --secondary-font: Inter;
+  --theme-color: #05051d;
+  --white: #ffffff;
+  --text-color: #a5a5ae;
+  --gradient: linear-gradient(
+    136deg,
+    #f9a65a 4.56%,
+    #ff74ad 49.04%,
+    #9a6bfe 92.6%
+  );
+  --border-color: #494a4d;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--theme-color) !important;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--primary-font) !important;
+}
+
+p {
+  font-family: var(--secondary-font) !important;
+}
+
+a {
+  text-decoration: none !important;
+  font-family: var(--secondary-font) !important;
+}
+
+/* Hero Start */
+
+#hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+
+.hero_pattern_shape {
+  position: absolute;
+  z-index: -1;
+}
+
+.hero_star_shape {
+  position: absolute;
+  bottom: 0;
+  left: 10%;
+}
+
+.hero_pattern_shape img,
+.hero_star_shape img {
+  width: 100%;
+}
+
+/* Navbar Start */
+
+.main_navbar {
+  border-radius: 100px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: #0f0f26;
+  backdrop-filter: blur(4px);
+  padding: 12px 20px !important;
+  margin-top: 20px;
+}
+
+.navbar-brand img {
+  width: 240px;
+}
+
+.navbar-nav {
+  border-radius: 100px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: #18183d;
+  box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.08);
+  padding: 0px 8px 2px !important;
+}
+
+.navbar-nav .nav-item {
+  margin: 0 10px;
+}
+
+.navbar-nav .nav-link {
+  color: var(--white) !important;
+  font-weight: 500;
+}
+
+.navbar-nav .nav-link:active {
+  color: var(--text-color) !important;
+}
+
+.navbar-nav .nav-link:hover {
+  color: var(--text-color) !important;
+}
+
+.user_btn {
+  display: flex;
+  align-items: center;
+}
+
+.user_btn .sign_in_btn {
+  color: var(--text-color);
+  font-family: var(--secondary-font);
+  font-size: 1em;
+  font-weight: 500;
+  margin-right: 15px;
+  transition: 0.4s;
+}
+
+.user_btn .sign_in_btn:hover {
+  color: var(--white);
+}
+
+.user_btn .premium_btn {
+  color: #121212;
+  font-family: var(--secondary-font);
+  font-size: 1em;
+  font-weight: 500;
+  background: var(--white);
+  border-radius: 30px;
+  padding: 8px 15px;
+}
+
+.user_btn .premium_btn:hover {
+  background: var(--gradient);
+  color: var(--white);
+}
+
+.navbar-toggler-icon {
+  background-image: url(../icons/menu_icon.png) !important;
+}
+
+.navbar-toggler:focus {
+  box-shadow: none !important;
+}
+
+@media screen and (max-width: 990px) {
+  .main_navbar {
+    border-radius: 10px;
+  }
+  .navbar-nav {
+    border-radius: 8px;
+    margin: 20px !important;
+  }
+
+  .user_btn {
+    margin-top: 30px;
+    margin-bottom: 15px;
+  }
+}
+
+/* Navbar End */
+
+/* Hero End */
