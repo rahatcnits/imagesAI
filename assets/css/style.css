@@ -670,6 +670,16 @@ a {
   font-weight: 500;
 }
 
+.about_img_mobile_device {
+  position: absolute;
+  left: -80px;
+  bottom: -80px;
+}
+
+.about_img_mobile_device img {
+  width: 100%;
+}
+
 @media screen and (max-width: 1620px) {
   .about_row2 .about_bg_layer_shape {
     left: 0px;
@@ -687,4 +697,230 @@ a {
   }
 }
 
+@media screen and (max-width: 990px) {
+  .about_head .about_sub_title {
+    width: 220px;
+  }
+
+  .about_head .about_sub_title::before {
+    left: -70px;
+    width: 70px;
+  }
+
+  .about_head .about_sub_title::after {
+    right: -70px;
+    width: 70px;
+  }
+
+  .about_head .about_sub_title span {
+    font-size: 0.9em;
+  }
+
+  .about_head .about_title {
+    font-size: 2.3em;
+  }
+
+  .about_head .about_desc {
+    font-size: 0.9em;
+  }
+
+  .about_content {
+    text-align: center;
+  }
+
+  .about_content .about_icon {
+    margin: 0 auto 30px;
+  }
+
+  .about_content h1 {
+    margin-bottom: 15px;
+  }
+
+  .about_row1 .about_img {
+    align-items: center;
+    margin-top: 70px;
+  }
+  .about_row2 .about_img {
+    align-items: center;
+    margin-top: 70px;
+  }
+
+  .about_row1 .about_bg_layer_shape {
+    display: none;
+  }
+
+  .about_row2 .about_bg_layer_shape {
+    display: none;
+  }
+
+  .about_img_generate_box {
+    padding: 6px 12px;
+  }
+
+  .about_row1 .about_img_generate_box_wrapper {
+    bottom: -22px;
+    left: 50%;
+    transform: translate(-50%);
+    width: 65%;
+  }
+
+  .about_row2 .about_img_generate_box_wrapper {
+    bottom: -38px;
+    left: 50%;
+    transform: translate(-50%);
+    width: 65%;
+  }
+
+  .about_img_generate_box input {
+    font-size: 10px;
+    width: 120px;
+  }
+
+  .about_img_generate_box button {
+    padding: 4px 8px;
+    font-size: 8px;
+  }
+
+  .about_row {
+    margin-top: 100px;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .about_img_mobile_device {
+    left: -35px;
+    bottom: -35px;
+  }
+
+  .about_img_mobile_device img {
+    width: 70%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .about_img_mobile_device {
+    left: -30px;
+    bottom: -30px;
+  }
+
+  .about_img_mobile_device img {
+    width: 50%;
+  }
+}
+
 /* About End */
+
+/* Feature Start */
+
+#feature {
+  padding: 100px 0;
+}
+
+.feature_head .feature_sub_title {
+  width: 240px;
+  margin: auto;
+  position: relative;
+}
+
+.feature_head .feature_sub_title::before {
+  content: "";
+  position: absolute;
+  left: -80px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 80px;
+  height: 1px;
+  background: linear-gradient(
+    115deg,
+    #f9a65a 2.67%,
+    rgba(255, 116, 173, 0.6) 35.53%,
+    rgba(154, 107, 254, 0) 67.71%
+  );
+  transform: rotate(180deg);
+}
+
+.feature_head .feature_sub_title::after {
+  content: "";
+  position: absolute;
+  right: -80px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 80px;
+  height: 1px;
+  background: linear-gradient(
+    115deg,
+    #f9a65a 2.67%,
+    rgba(255, 116, 173, 0.6) 35.53%,
+    rgba(154, 107, 254, 0) 67.71%
+  );
+}
+
+.feature_head .sub_title_text {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+  border-radius: 30px;
+  border: 1px solid #494a4d;
+  background: rgba(41, 41, 41, 0.16);
+  box-shadow: 0px -1px 4px 0px rgba(255, 255, 255, 0.12) inset;
+}
+
+.feature_head .feature_sub_title span {
+  background: linear-gradient(180deg, #fff 0%, rgba(255, 255, 255, 0) 214.29%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 1em;
+  font-weight: 500;
+  color: var(--white);
+  font-family: var(--secondary-font);
+}
+
+.feature_head .feature_title {
+  color: rgba(255, 255, 255, 0.9);
+  font-family: var(--primary-font);
+  font-size: 3.5em;
+  font-weight: 500;
+  text-transform: capitalize;
+  text-align: center;
+  margin: 20px 0;
+}
+
+.feature_head .feature_title span {
+  background: var(--gradient);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.feature_head .feature_desc {
+  color: var(--text-color);
+  font-family: var(--secondary-font);
+  font-size: 1em;
+  font-weight: 500;
+  text-align: center;
+}
+
+.feature_card {
+  position: relative;
+  border-radius: 14px;
+  border: 1px solid #242439;
+  background: #0f0f26;
+  box-shadow: 0px 4px 24px 0px #061c30;
+  z-index: -2;
+}
+
+.feature_card .card_shape {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: -1;
+}
+
+.feature_card .card_content {
+  z-index: 99 !important;
+}
+
+/* Feature End */
