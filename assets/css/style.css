@@ -349,6 +349,12 @@ a {
   user-select: none;
 }
 
+@media screen and (max-width: 1200px) {
+  #hero {
+    height: 110vh;
+  }
+}
+
 @media screen and (max-width: 990px) {
   #hero {
     height: auto;
