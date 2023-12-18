@@ -978,6 +978,30 @@ a {
   vertical-align: middle;
 }
 
+@media screen and (max-width: 990px) {
+  .feature_head .feature_sub_title {
+    width: 220px;
+  }
+
+  .feature_head .feature_sub_title::before {
+    left: -70px;
+    width: 70px;
+  }
+
+  .feature_head .feature_sub_title::after {
+    right: -70px;
+    width: 70px;
+  }
+
+  .feature_head .feature_sub_title span {
+    font-size: 0.9em;
+  }
+
+  .feature_head .feature_title {
+    font-size: 2.3em;
+  }
+}
+
 /* Feature End */
 
 /* Tool Start */
@@ -1107,6 +1131,10 @@ a {
 
 /* Reviews Start */
 
+#reviews {
+  padding-top: 50px;
+}
+
 .reviews_head .reviews_sub_title {
   width: 240px;
   margin: auto;
@@ -1193,6 +1221,7 @@ a {
   font-weight: 500;
   text-align: center;
   padding: 0 50px;
+  margin-bottom: 80px;
 }
 
 .reviews_card {
@@ -1310,8 +1339,40 @@ a {
 }
 
 @media screen and (max-width: 990px) {
+  .reviews_head .reviews_sub_title {
+    width: 220px;
+  }
+
+  .reviews_head .reviews_sub_title::before {
+    left: -70px;
+    width: 70px;
+  }
+
+  .reviews_head .reviews_sub_title::after {
+    right: -70px;
+    width: 70px;
+  }
+
+  .reviews_head .reviews_sub_title span {
+    font-size: 0.9em;
+  }
+
+  .reviews_head .reviews_title {
+    font-size: 2.3em;
+  }
+
   .reviews_content {
     grid-template-columns: repeat(1, 1fr);
+  }
+
+  .reviews_content {
+    height: auto;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .reviews_head .reviews_desc {
+    padding: 0 0px;
   }
 }
 
@@ -1320,23 +1381,21 @@ a {
 /* Newsletter Start */
 
 #newsletter {
-  padding: 80px 0;
+  padding: 100px 0;
 }
 
 .newsletter_wrapper {
   position: relative;
-  width: 100%;
   height: 100%;
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
   border-radius: 28px;
   border: 1px solid #2a3d63;
-  background: #0d0d25 url(../img/newsletter_bg.svg);
+  background: #0d0d25 url(../img/newsletter_bg.svg) no-repeat center;
+  background-size: cover;
   box-shadow: 0px 1px 2px 0px rgba(255, 116, 173, 0.08),
     0px 0px 8px 0px rgba(255, 116, 173, 0.3);
   padding: 50px 0;
   text-align: center;
+  margin: 0 40px;
 }
 
 .newsletter_content {
@@ -1407,6 +1466,7 @@ a {
   background: transparent;
   padding-left: 6px;
   color: var(--text-color);
+  width: calc(100% - 50px);
 }
 
 .newsletter_search_box button {
@@ -1424,4 +1484,114 @@ a {
   font-size: 14px;
 }
 
+@media screen and (max-width: 990px) {
+  .newsletter_wrapper {
+    padding: 50px 15px;
+    margin: 0 10px;
+  }
+
+  .newsletter_icon {
+    width: 60px;
+    height: 60px;
+  }
+
+  .newsletter_content h1 {
+    font-size: 1.6em;
+  }
+
+  .newsletter_content p {
+    font-size: 0.9em;
+  }
+
+  .newsletter_search_box {
+    width: 95%;
+    padding: 6px;
+  }
+
+  .newsletter_search_box button {
+    padding: 6px 8px;
+    font-size: 12px;
+  }
+}
+
 /* Newsletter End */
+
+/* Footer Start */
+
+#footer {
+  border-top: 1px solid rgba(255, 255, 255, 0.16);
+  padding-top: 80px;
+}
+
+.footer_content .footer_logo {
+  display: inline-block;
+  margin-bottom: 30px;
+}
+
+.footer_content .footer_logo img {
+  width: 140px;
+}
+
+.footer_content p {
+  color: var(--text-color);
+  font-family: var(--secondary-font);
+  font-size: 0.9em;
+  font-weight: 400;
+}
+
+.footer_content h4 {
+  color: var(--text-color);
+  font-family: var(--secondary-font);
+  font-size: 1.1em;
+  font-weight: 500;
+  margin-bottom: 25px;
+}
+
+.footer_content ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.footer_content ul li {
+  margin-bottom: 10px;
+}
+
+.footer_content ul li a {
+  text-decoration: none;
+  color: var(--text-color);
+  font-family: var(--secondary-font);
+  font-size: 1em;
+  font-weight: 400;
+}
+
+.footer_content ul li a span {
+  margin-right: 5px;
+}
+
+.copyright {
+  border-top: 1px solid rgba(255, 255, 255, 0.16);
+  margin-top: 80px;
+}
+
+.copyright p {
+  margin-bottom: 0;
+  color: var(--text-color);
+  font-family: var(--secondary-font);
+  font-size: 0.9em;
+  font-weight: 500;
+  text-align: center;
+  padding: 20px 0;
+}
+
+@media screen and (max-width: 990px) {
+  #footer {
+    padding-top: 40px;
+  }
+
+  .footer_content {
+    margin-top: 40px;
+  }
+}
+
+/* Footer End */
