@@ -92,6 +92,7 @@ a {
   background: #18183d;
   box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.08);
   padding: 0px 8px 2px !important;
+  margin: auto;
 }
 
 .navbar-nav .nav-item {
@@ -189,7 +190,7 @@ a {
 
   .navbar-nav {
     border-radius: 8px;
-    margin: 20px !important;
+    margin: 30px auto 0 !important;
   }
 
   .user_btn {
@@ -272,6 +273,16 @@ a {
   padding: 15px 25px;
   font-family: var(--secondary-font);
   font-size: 1em;
+  transition: all 0.5s linear;
+}
+
+.hero_btn a:hover {
+  background: linear-gradient(
+    320deg,
+    #f9a65a 4.56%,
+    #ff74ad 49.04%,
+    #9a6bfe 92.6%
+  );
 }
 
 .hero_content ul {
@@ -510,17 +521,26 @@ a {
 }
 
 .about_content .about_btn a {
-  display: inline-block;
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
   border-radius: 30px;
-  border: 1px solid #f9a65a;
+  background: linear-gradient(#212734, #212734) padding-box,
+    var(--gradient) border-box;
+  border: 1px solid transparent;
   padding: 8px 12px;
-  background: #212734;
   box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05),
     0px -3px 24px 0px rgba(5, 5, 29, 0.4) inset;
   color: var(--white);
   font-family: var(--secondary-font);
   font-size: 14px;
   font-weight: 500;
+  transition: all 0.5s linear;
+}
+
+.about_content .about_btn a:hover {
+  background: var(--gradient) padding-box, var(--gradient) border-box;
 }
 
 .about_img {
@@ -528,6 +548,16 @@ a {
   display: flex;
   flex-direction: column;
   align-items: center;
+  animation: bounch 3s linear infinite alternate-reverse;
+}
+
+@keyframes bounch {
+  0% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(10px);
+  }
 }
 
 .about_img_box {
@@ -912,6 +942,7 @@ a {
   box-shadow: 0px 4px 24px 0px #061c30;
   z-index: -2;
   overflow: hidden;
+  margin-top: 50px;
 }
 
 .feature_card .card_shape {
@@ -970,12 +1001,18 @@ a {
 
 .feature_card_img {
   width: 100%;
+  height: 400px;
 }
 
 .feature_card_img img {
   width: 100%;
   height: 100%;
-  vertical-align: middle;
+}
+
+@media screen and (max-width: 1200px) {
+  .feature_card_img {
+    height: 280px;
+  }
 }
 
 @media screen and (max-width: 990px) {
@@ -999,6 +1036,10 @@ a {
 
   .feature_head .feature_title {
     font-size: 2.3em;
+  }
+
+  .feature_card_img {
+    height: auto;
   }
 }
 
@@ -1563,6 +1604,11 @@ a {
   font-family: var(--secondary-font);
   font-size: 1em;
   font-weight: 400;
+  transition: 0.4s;
+}
+
+.footer_content ul li a:hover {
+  color: var(--white);
 }
 
 .footer_content ul li a span {
